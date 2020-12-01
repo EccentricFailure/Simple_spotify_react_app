@@ -4,8 +4,9 @@ import Navbar from './components/Navbar';
 import Content from './components/Content';
 import Pagetwo from './components/Pagetwo';
 import { Link, Route, Switch } from "react-router-dom";
+import { BreakpointProvider } from 'react-socks';
 
-function App() {
+function App() { 
   return (
     <BreakpointProvider>
       <div className="App">
