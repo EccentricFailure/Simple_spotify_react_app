@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #eee;
+    background-color: rgb(10, 214, 214);
     transition: all .7s ease-in;
   }
   //IMPORTANT
@@ -13,11 +13,38 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: lightblue;
+    background-color: rgb(6, 91, 97);
   }
   .logo img{
     width: 50px;
   }
   .navigation{
-      //your navigation styles
+    padding: 5px;
+  }
+
+  .navigation ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .navigation li{
+    float: left; 
+  }
+
+  .navigation li a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    color: rgb(245, 39, 8);
+    text-decoration: none;
+  }
+
+  .navigation a:hover{
+    background-color: blueviolet;
+  }
+
+  .active {
+    background-color: #4CAF50;
   }

@@ -2,15 +2,18 @@
 import React from'react';
 import Navbar from './components/Navbar';
 import Content from './components/Content';
-
+import Pagetwo from './components/Pagetwo';
+import { Link, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Content />
-      
-    </div>
+    <BreakpointProvider>
+      <div className="App">
+        <Navbar />
+        <Route path="/content"><Content /></Route>
+        <Route path="/content2"><Pagetwo /></Route>
+      </div>
+    </BreakpointProvider>
   );
 }
 

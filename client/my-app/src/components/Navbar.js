@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import './navbar.scss';
 import logo from '../logo.svg';
+import { NavLink, Route, Switch } from "react-router-dom";
 
 const Navbar=() => {
   const [scrolled,setScrolled]=React.useState(false);
@@ -24,19 +25,17 @@ const Navbar=() => {
   }
   return (
     <header className={x.join(" ")}>
+
+        <div className="navigation">
+            <ul>
+              <li><NavLink to="/content">content</NavLink></li>
+              <li><NavLink to="/content2">content2</NavLink></li>
+            </ul>
+        </div>
+
         <div className="logo">
           <img src={logo} alt="Logo" title="Logo" />
         </div>
-
-        <nav className="navigation">
-            <ul>
-              <li><a href="#post1">Home</a></li>
-              <li><a href="#post2">Home</a></li>
-              <li><a href="#post3">Home</a></li>
-              <li><a href="#post4">Home</a></li>
-            </ul>
-        </nav>
-
     </header>
   )
 };
