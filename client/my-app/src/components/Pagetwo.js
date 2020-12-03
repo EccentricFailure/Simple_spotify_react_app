@@ -1,7 +1,7 @@
 import React from 'react';
 import './Pagetwo.scss';
 
-const Content=() => {
+const Pagetwo=() => {
   const data=(
     <div className="box">
         <h2>it worked </h2>
@@ -9,7 +9,7 @@ const Content=() => {
   )
 
 return (
-    <main className="content">
+    <main className="Pagetwo">
         {data}
         {data}
         {data}
@@ -18,4 +18,4 @@ return (
     </main>
   )
 }
-export default Content;
+export default Pagetwo;

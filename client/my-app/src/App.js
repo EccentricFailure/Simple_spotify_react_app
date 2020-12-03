@@ -8,28 +8,12 @@ import { BreakpointProvider } from 'react-socks';
 
 class App extends Component{ 
 
-  constructor(props) {
-    super(props);
-    this.state = { apiResponse: "" };
-  }
-
-  callAPI() {
-      fetch("http://localhost:9000/testAPI")
-          .then(res => res.text())
-          .then(res => this.setState({ apiResponse: res }));
-  }
-
-  componentWillMount() {
-      this.callAPI();
-  }
-
   
   render(){
     return (
         <BreakpointProvider>
           <div className="App">
             <Navbar />
-            
             <Route path="/content"><Content /></Route>
             <Route path="/content2"><Pagetwo /></Route>
           </div>
