@@ -15,6 +15,7 @@ class Content extends Component {
     return (
       <main className="content">
           {data}
+         
       </main>
     )
   }

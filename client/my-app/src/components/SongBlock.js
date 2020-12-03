@@ -20,7 +20,7 @@ class SongBlock extends Component{
         return(
         <p className='App-intro'> {this.state.apiResponse.map(track => (
             <li key={track.id}>
-                {track.link}
+                <iframe src={track.link} width="300" height="380" frameboard="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </li>
         ))}
         </p>
