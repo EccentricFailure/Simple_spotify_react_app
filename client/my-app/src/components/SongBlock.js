@@ -23,7 +23,7 @@ class SongBlock extends Component{
             songInfo = <h3>Loading song data now...</h3>;
           }
         return(
-            <div>
+            <div className="song-list">
 
                 {songInfo}
             </div>
