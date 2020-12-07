@@ -26,15 +26,13 @@ const Navbar=() => {
   return (
     <header className={x.join(" ")}>
 
+
         <div className="navigation">
             <ul>
+              <li className="logo" ><NavLink to="/" name="logo"><img src={logo} alt="Logo" title="Logo" /></NavLink></li>
               <li><NavLink to="/content">content</NavLink></li>
               <li><NavLink to="/content2">content2</NavLink></li>
             </ul>
-        </div>
-
-        <div className="logo">
-          <img src={logo} alt="Logo" title="Logo" />
         </div>
     </header>
   )

@@ -8,13 +8,14 @@
     background-color: rgb(10, 214, 214);
     transition: all .7s ease-in;
   }
-  //IMPORTANT
+
   .scrolled{
     position: fixed;
     top: 0;
     left: 0;
     background-color: rgb(6, 91, 97);
   }
+
   .logo img{
     width: 50px;
   }
@@ -22,7 +23,7 @@
     padding: 5px;
   }
 
-  .navigation ul{
+  ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -33,7 +34,7 @@
     float: left; 
   }
 
-  .navigation li a{
+  a{
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -41,10 +42,11 @@
     text-decoration: none;
   }
 
-  .navigation a:hover{
+  .navigation a:hover:not([name="logo"]){
     background-color: blueviolet;
   }
 
-  .active {
+  .active:not([name="logo"]) {
     background-color: #4CAF50;
   }
+

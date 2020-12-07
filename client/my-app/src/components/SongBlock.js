@@ -2,28 +2,31 @@ import React, { Component } from 'react';
 import './SongBlock.scss';
 
 class SongBlock extends Component{
-    constructor(props) {
-        super(props);
-        this.state = { apiResponse: [] };
-      }
-    
 
-      componentDidMount() {
-        fetch("http://localhost:9000/songs")
-        .then(res => res.json())
-        .then((result) => this.setState({ apiResponse: result }));
-         // this.callAPI();
-      }
+    state = { id:null, songDetails: false};
+
 
     render(){
-        console.log(this.state.apiResponse)
+        const {loading, songs} = this.props;
+        let songInfo = null;
+
+        if (!loading && songs.length > 0) {
+            songInfo = songs.map(song => {
+                return(
+                    <div className='item' key={song.id}>
+                        <iframe src={song.link} width="300" height="380" frameboard="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                );
+            })
+        }
+        if (loading) {
+            songInfo = <h3>Loading song data now...</h3>;
+          }
         return(
-        <p className='App-intro'> {this.state.apiResponse.map(track => (
-            <li key={track.id}>
-                <iframe src={track.link} width="300" height="380" frameboard="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            </li>
-        ))}
-        </p>
+            <div>
+
+                {songInfo}
+            </div>
         );
     }
 }

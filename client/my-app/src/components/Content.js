@@ -2,22 +2,24 @@ import React, { Component } from 'react';
 import './content.scss';
 import SongBlock from './SongBlock';
 
-const data=(
-  <div className="box">
-      <SongBlock/>
-  </div>
-)
-
 class Content extends Component {
+  state = {
+    songs: [],
+    loading: true,
+  };
 
+
+  componentDidMount() {
+    fetch("http://localhost:9000/songs")
+    .then(res => res.json())
+    .then((result) => this.setState({ loading: false, songs: result }));
+  }
 
   render(){
+    console.log(this.state.songs)
     return (
-      <main className="content">
-          {data}
-         
-      </main>
-    )
+      <SongBlock loading={this.state.loading} songs={this.state.songs}/>
+    );
   }
 }
 export default Content;
