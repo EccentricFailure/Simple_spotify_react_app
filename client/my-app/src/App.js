@@ -17,8 +17,8 @@ class App extends Component{
             <Navbar />
               <Switch>
                 <Route exact path="/" component={Dashboard} />
-                <Route exact path="/content"><AllSongs /></Route>
-                <Route exact path="/content2"><Genre /></Route>
+                <Route exact path="/songlist"><AllSongs /></Route>
+                <Route exact path="/genres"><Genre /></Route>
               </Switch>
           </div>
         </BreakpointProvider>

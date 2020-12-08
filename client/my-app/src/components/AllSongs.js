@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import './AllSongs.scss';
 import SongBlock from './SongBlock';
 
-class Content extends Component {
+class AllSongs extends Component {
   state = {
     songs: [],
     loading: true,
   };
-
 
   componentDidMount() {
     fetch("http://localhost:9000/songs")
@@ -22,4 +21,4 @@ class Content extends Component {
     );
   }
 }
-export default Content;
+export default AllSongs;

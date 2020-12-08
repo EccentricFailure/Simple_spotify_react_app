@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Genre.scss';
+import SongBlock from './SongBlock';
 
-const Pagetwo=() => {
-  const data=(
-    <div className="box">
-        <h2>it worked </h2>
-    </div>
-  )
+class Genre extends Component {
+  state = {
+    songs: [],
+    loading: true,
+  };
 
-return (
-    <main className="Pagetwo">
-        {data}
-        {data}
-        {data}
-        {data}
-        {data}
-    </main>
-  )
+  componentDidMount() {
+    fetch("http://localhost:9000/songs/grunge")
+    .then(res => res.json())
+    .then((result) => this.setState({ loading: false, songs: result }));
+  }
+
+  render(){
+    console.log(this.state.songs)
+    return (
+      <SongBlock loading={this.state.loading} songs={this.state.songs}/>
+    );
+  }
 }
-export default Pagetwo;
+export default Genre;

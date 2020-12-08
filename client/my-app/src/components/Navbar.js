@@ -30,8 +30,8 @@ const Navbar=() => {
         <div className="navigation">
             <ul>
               <li className="logo" ><NavLink to="/" name="logo"><img src={logo} alt="Logo" title="Logo" /></NavLink></li>
-              <li><NavLink to="/content">List of Songs</NavLink></li>
-              <li><NavLink to="/content2">Genres</NavLink></li>
+              <li><NavLink to="/songlist">List of Songs</NavLink></li>
+              <li><NavLink to="/genres">Genres</NavLink></li>
             </ul>
         </div>
     </header>
