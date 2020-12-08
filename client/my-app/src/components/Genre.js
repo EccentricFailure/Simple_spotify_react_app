@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pagetwo.scss';
+import './Genre.scss';
 
 const Pagetwo=() => {
   const data=(

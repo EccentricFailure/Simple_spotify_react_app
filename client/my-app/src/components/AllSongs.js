@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './content.scss';
+import './AllSongs.scss';
 import SongBlock from './SongBlock';
 
 class Content extends Component {

@@ -1,8 +1,8 @@
 //import './App.scss';
 import React, { Component } from'react';
 import Navbar from './components/Navbar';
-import Content from './components/Content';
-import Pagetwo from './components/Pagetwo';
+import AllSongs from './components/AllSongs';
+import Genre from './components/Genre';
 import { Link, Route, Router, Switch } from "react-router-dom";
 import { BreakpointProvider } from 'react-socks';
 import Dashboard from './components/Dashboard'
@@ -17,8 +17,8 @@ class App extends Component{
             <Navbar />
               <Switch>
                 <Route exact path="/" component={Dashboard} />
-                <Route exact path="/content"><Content /></Route>
-                <Route exact path="/content2"><Pagetwo /></Route>
+                <Route exact path="/content"><AllSongs /></Route>
+                <Route exact path="/content2"><Genre /></Route>
               </Switch>
           </div>
         </BreakpointProvider>
