@@ -14,7 +14,8 @@ class SongBlock extends Component{
             songInfo = songs.map(song => {
                 return(
                     <div className='item' key={song.id}>
-                        <iframe src={song.link} width="300" height="380" frameboard="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        hello?
+                        <iframe title="what" src={song.link} width="300" height="380" frameboard="0" allowTransparency="true" allow="encrypted-media"></iframe>
                     </div>
                 );
             })
