@@ -15,7 +15,7 @@ const data = [
     {id: 11, genre: 'britpop', link: 'https://open.spotify.com/embed/track/3HjzdNcNfc136jfd1LXUHV'},
 ];
 
-function matchesGenre(songs, query) {
+function matchesSearch(songs, query) {
     return songs.filter(function(el) {
         if (el.genre == query || el.artist == query || el.title == query)
             return true;
@@ -29,8 +29,35 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:query', function(req, res, next) {
-    let found = matchesGenre(data, req.params.query);
+    let found = matchesSearch(data, req.params.query);
     res.json(found);
+});
+
+router.post('/', function(req, res) {
+    let songIds = data.map(song => song.id);
+  
+    let newId = songIds.length > 0 ? Math.max.apply(Math, songIds) + 1 : 1;
+
+    let newSong = {
+        id: newId,
+        title: req.body.title,
+        artist: req.body.artist,
+        link: req.body.link
+      };
+      data.push(newSong);
+      res.status(201).json(newSong);
+});
+
+router.delete('/:id', function (req, res) {
+    let found = data.find(function (song) {
+      return song.id === parseInt(req.params.id);
+    });
+  
+    if (found) {
+      let targetIndex = song.indexOf(found);
+      song.splice(targetIndex, 1);
+    }
+    res.sendStatus(204);
 });
 
 module.exports = router;

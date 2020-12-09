@@ -2,7 +2,7 @@
 import React, { Component } from'react';
 import Navbar from './components/Navbar';
 import AllSongs from './components/AllSongs';
-import Genre from './components/Genre';
+import Add from './components/Add';
 import { Link, Route, Router, Switch } from "react-router-dom";
 import { BreakpointProvider } from 'react-socks';
 import Dashboard from './components/Dashboard'
@@ -18,7 +18,7 @@ class App extends Component{
               <Switch>
                 <Route exact path="/" component={Dashboard} />
                 <Route exact path="/songlist"><AllSongs /></Route>
-                <Route exact path="/genres"><Genre /></Route>
+                <Route exact path="/add"><Add /></Route>
               </Switch>
           </div>
         </BreakpointProvider>

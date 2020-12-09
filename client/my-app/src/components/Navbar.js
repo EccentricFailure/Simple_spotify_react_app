@@ -31,7 +31,7 @@ const Navbar=() => {
             <ul>
               <li className="logo" ><NavLink to="/" name="logo"><img src={logo} alt="Logo" title="Logo" /></NavLink></li>
               <li><NavLink to="/songlist">List of Songs</NavLink></li>
-              <li><NavLink to="/genres">Genres</NavLink></li>
+              <li><NavLink to="/add">Add new song</NavLink></li>
             </ul>
         </div>
     </header>
