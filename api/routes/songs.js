@@ -54,8 +54,8 @@ router.delete('/:id', function (req, res) {
     });
   
     if (found) {
-      let targetIndex = song.indexOf(found);
-      song.splice(targetIndex, 1);
+      let targetIndex = data.indexOf(found);
+      data.splice(targetIndex, 1);
     }
     res.sendStatus(204);
 });

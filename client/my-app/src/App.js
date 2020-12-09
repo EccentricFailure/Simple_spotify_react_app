@@ -15,11 +15,11 @@ class App extends Component{
         <BreakpointProvider>
           <div className="App">
             <Navbar />
-              <Switch>
-                <Route exact path="/" component={Dashboard} />
-                <Route exact path="/songlist"><AllSongs /></Route>
-                <Route exact path="/add"><Add /></Route>
-              </Switch>
+            <Switch>
+              <Route exact path="/" component={Dashboard} />
+              <Route exact path="/songlist"><AllSongs /></Route>
+              <Route exact path="/add"><Add /></Route>
+            </Switch>
           </div>
         </BreakpointProvider>
       );
