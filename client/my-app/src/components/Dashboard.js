@@ -62,7 +62,7 @@ class Dashboard extends Component {
 
         return(
             <>
-                <h1>Search for a song by name, artist or genre</h1>
+                <h1>Search for a song by name or artist</h1>
                 <form className="search-wrapper" onSubmit={this.handleSubmit}>
                     <label className="search-label">
                         Search here

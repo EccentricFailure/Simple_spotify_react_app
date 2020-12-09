@@ -2,17 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 const data = [
-    {id: 1, artist: 'Nirvana', genre: 'grunge', link: 'https://open.spotify.com/embed/track/40VSbBSYbPN10vJYeZq4tm'},
-    {id: 2, genre: 'indie rock', link: 'https://open.spotify.com/embed/track/6wVWJl64yoTzU27EI8ep20'},
-    {id: 3, genre: 'idk', link: 'https://open.spotify.com/embed/track/29GCe8yTDCVKr6EowPKrER'},
-    {id: 4, genre: 'grunge', link: 'https://open.spotify.com/embed/track/2v8sPwkqVDgWprsmGIis25'},
-    {id: 5, genre: 'grunge', link: 'https://open.spotify.com/embed/track/0eENgTgNVheMpLiQO5aveL'},
-    {id: 6, genre: 'grunge', link: 'https://open.spotify.com/embed/track/0ExY9ASOmSCFdQ1QiBpYd4'},
-    {id: 7, genre: 'grunge', link: 'https://open.spotify.com/embed/track/2loEXJRB5ExGcUHYX365R5'},
-    {id: 8, genre: 'grunge', link: 'https://open.spotify.com/embed/track/4zg2zMNSI0W8ipGA32kKp5'},
-    {id: 9, genre: 'grunge', link: 'https://open.spotify.com/embed/track/1hNE737dkYD9ZM1J8H9chv'},
-    {id: 10, genre: 'grunge', link: 'https://open.spotify.com/embed/track/1cSgnOFHPaWp6b3FHOjmP5'},
-    {id: 11, genre: 'britpop', link: 'https://open.spotify.com/embed/track/3HjzdNcNfc136jfd1LXUHV'},
+    {id: 1, artist: 'Nirvana', title: 'Marigold', link: 'https://open.spotify.com/embed/track/40VSbBSYbPN10vJYeZq4tm'},
+    {id: 2, artist: 'Arctic Monkeys', title: 'Crying Lightning', link: 'https://open.spotify.com/embed/track/6wVWJl64yoTzU27EI8ep20'},
+    {id: 3, artist: 'together PANGEA', title: 'Money on it', link: 'https://open.spotify.com/embed/track/29GCe8yTDCVKr6EowPKrER'},
+    {id: 4, artist: 'Queens of the Stone Age', title: '...Like Clockwork', link: 'https://open.spotify.com/embed/track/2v8sPwkqVDgWprsmGIis25'},
+    {id: 5, artist: 'KennyHoopla', title: 'how will i rest in piece if im buried by a highway?//', link: 'https://open.spotify.com/embed/track/0eENgTgNVheMpLiQO5aveL'},
+    {id: 6, artist: 'YUNGBLUD', title: 'mars', link: 'https://open.spotify.com/embed/track/0ExY9ASOmSCFdQ1QiBpYd4'},
+    {id: 7, artist: 'X Ambassadors', title: 'Zen', link: 'https://open.spotify.com/embed/track/2loEXJRB5ExGcUHYX365R5'},
+    {id: 8, artist: 'The Orion Experience', title: 'The Cult of Dionysus', link: 'https://open.spotify.com/embed/track/4zg2zMNSI0W8ipGA32kKp5'},
+    {id: 9, artist: 'Rammstein', title: 'Du riechst so gut', link: 'https://open.spotify.com/embed/track/1hNE737dkYD9ZM1J8H9chv'},
+    {id: 10, artist: 'Mother Mother', title: 'Sleep Awake', link: 'https://open.spotify.com/embed/track/1cSgnOFHPaWp6b3FHOjmP5'},
+    {id: 11, artist: 'Interpol', title: 'Obstacle 1', link: 'https://open.spotify.com/embed/track/3HjzdNcNfc136jfd1LXUHV'},
 ];
 
 function matchesSearch(songs, query) {
