@@ -5,15 +5,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(10, 214, 214);
-    transition: all .7s ease-in;
+    background-color: rgb(6, 91, 97);
+
   }
 
   .scrolled{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(6, 91, 97);
   }
 
   .logo img{
@@ -28,25 +27,30 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    vertical-align: middle;
   }
 
   .navigation li{
     float: left; 
+   
   }
 
   a{
+    font-size: 200%;
     display: block;
     text-align: center;
     padding: 14px 16px;
-    color: rgb(245, 39, 8);
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
 
   .navigation a:hover:not([name="logo"]){
-    background-color: blueviolet;
+    background-color: rgb(12, 201, 12);
   }
 
-  .active:not([name="logo"]) {
-    background-color: #4CAF50;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    a{
+      font-size: 100%;
+    }
   }
 

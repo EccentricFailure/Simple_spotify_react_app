@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import './SongBlock.scss';
+import axios from 'axios';
 
 class SongBlock extends Component{
 
     state = { id:null, songDetails: false};
 
+    refresh(){
+        window.location.reload();
+    }
 
     render(){
         const {loading, songs} = this.props;
@@ -12,9 +16,18 @@ class SongBlock extends Component{
 
         if (!loading && songs.length > 0) {
             songInfo = songs.map(song => {
+                const ID = song.id;
                 return(
                     <div className='item' key={song.id}>
-                        <iframe src={song.link} width="300" height="380" frameboard="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        <iframe title="what" src={song.link} width="300" height="380" frameboard="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        <div className="buttonDiv">
+                            <button onClick={async () => {
+                                const result = await axios.delete(`http://localhost:9000/songs/${ID}`);
+                                this.refresh();
+                            }}>
+                                Delete
+                            </button>
+                        </div>
                     </div>
                 );
             })
@@ -24,7 +37,6 @@ class SongBlock extends Component{
           }
         return(
             <div className="song-list">
-
                 {songInfo}
             </div>
         );

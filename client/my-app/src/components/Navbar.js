@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
 import './navbar.scss';
-import logo from '../logo.svg';
+import logo from '../music.svg';
 import { NavLink, Route, Switch } from "react-router-dom";
 
 const Navbar=() => {
@@ -25,15 +25,13 @@ const Navbar=() => {
   }
   return (
     <header className={x.join(" ")}>
-
-
-        <div className="navigation">
-            <ul>
-              <li className="logo" ><NavLink to="/" name="logo"><img src={logo} alt="Logo" title="Logo" /></NavLink></li>
-              <li><NavLink to="/songlist">List of Songs</NavLink></li>
-              <li><NavLink to="/genres">Genres</NavLink></li>
-            </ul>
-        </div>
+      <div className="navigation">
+          <ul>
+            <li className="logo" ><NavLink to="/" name="logo"><img src={logo} alt="Logo" title="Logo" /></NavLink></li>
+            <li><NavLink to="/songlist">List of Songs</NavLink></li>
+            <li><NavLink to="/add">Add New Song</NavLink></li>
+          </ul>
+      </div>
     </header>
   )
 };

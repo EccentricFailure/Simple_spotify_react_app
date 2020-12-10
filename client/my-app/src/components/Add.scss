@@ -1,0 +1,35 @@
+.input-wrap {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.input-div {
+    margin: 20px;
+}
+
+input {
+    margin: 12px;
+    width: 300px;
+    height: 30px;
+    font-size: large;
+}
+
+.input-wrap button {
+    font-size: large;
+    width: 150px;
+    padding: 8px;
+    cursor:pointer;
+    box-shadow: 0 6px rgb(0, 0, 0);
+    background-color: rgb(25, 194, 25);
+    border-radius: 5px;
+}
+
+.input-wrap button:hover {
+    background-color: rgb(16, 168, 16);
+}
+
+.input-wrap button:active {
+    box-shadow: 0 3px rgb(0, 0, 0);
+    transform: translateY(3px);
+}
