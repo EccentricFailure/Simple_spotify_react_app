@@ -6,8 +6,3 @@ A simple react website, that shows a selection of embeded spotify songs
 Built with
 *  Node.js (Express)
 *  React
-
-## Features
-
-## Setup
-
