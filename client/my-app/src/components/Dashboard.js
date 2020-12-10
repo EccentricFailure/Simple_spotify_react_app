@@ -62,21 +62,21 @@ export default class Dashboard extends Component {
 
         return(
             <>
-            <h1>Search for a song by name or artist</h1>
-            <form className="search-form" onSubmit={this.handleSubmit}>
-                <label className="search-label">
-                    Search here
-                    <input
-                        className="search-input"
-                        type="text"
-                        value={this.state.value}
-                        onChange={this.handleChange}
-                        placeholder="..."
-                    />
-                </label>
-                <input type="submit" value="search"/>
-            </form>
-            {songInfo ? songInfo : null}
+                <h1>Search for a song by name or artist</h1>
+                <form className="search-form" onSubmit={this.handleSubmit}>
+                    <label className="search-label">
+                        Search here
+                        <input
+                            className="search-input"
+                            type="text"
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                            placeholder="..."
+                        />
+                    </label>
+                    <input type="submit" value="search"/>
+                </form>
+                {songInfo ? songInfo : null}
             </>
         );
     }
