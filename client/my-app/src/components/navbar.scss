@@ -41,7 +41,8 @@
     float: left; 
     }
     a:hover:not([name="logo"]){
-    background-color: $button-color;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(241, 123, 159)
     }
   }
 
