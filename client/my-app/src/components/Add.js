@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import './Add.scss';
 import axios from 'axios';
 
@@ -7,7 +7,8 @@ const Add = () => {
   const [title, setTitle] = useState();
   const [artist, setArtist] = useState();
   const [link, setLink] = useState();
-
+  const [refresh, doRefresh] = useState();
+  
   return (
     <div className="input-wrap">
         <div className="input-div">
@@ -25,6 +26,7 @@ const Add = () => {
               artist, title, link
             });
             console.log(result);
+            window.location.reload();
           }}
           >Submit</button>
         </div>
