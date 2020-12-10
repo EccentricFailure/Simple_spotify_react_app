@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './AllSongs.scss';
 import SongBlock from './SongBlock';
 
-class AllSongs extends Component {
+export default class AllSongs extends Component {
   state = {
     songs: [],
     loading: true,
@@ -17,8 +17,7 @@ class AllSongs extends Component {
   render(){
     console.log(this.state.songs)
     return (
-      <SongBlock loading={this.state.loading} songs={this.state.songs}/>
+       <SongBlock loading={this.state.loading} songs={this.state.songs}/>
     );
   }
 }
-export default AllSongs;

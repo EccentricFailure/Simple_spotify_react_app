@@ -1,4 +1,4 @@
-//import './App.scss';
+import './App.scss';
 import React, { Component } from'react';
 import Navbar from './components/Navbar';
 import AllSongs from './components/AllSongs';
@@ -7,7 +7,7 @@ import { Link, Route, Router, Switch } from "react-router-dom";
 import { BreakpointProvider } from 'react-socks';
 import Dashboard from './components/Dashboard'
 
-function App(){ 
+export default function App(){ 
 
   return (
       <BreakpointProvider>
@@ -15,12 +15,10 @@ function App(){
           <Navbar />
           <Switch>
             <Route exact path="/" component={Dashboard} />
-            <Route exact path="/songlist"><AllSongs /></Route>
-            <Route exact path="/add"><Add /></Route>
+            <Route exact path="/songlist"component={AllSongs} />
+            <Route exact path="/add"component={Add} />
           </Switch>
         </div>
       </BreakpointProvider>
     );
 }
-
-export default App;

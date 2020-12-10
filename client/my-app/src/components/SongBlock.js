@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './SongBlock.scss';
 import axios from 'axios';
 
-class SongBlock extends Component{
+export default class SongBlock extends Component{
 
     state = { id:null, songDetails: false};
 
@@ -42,4 +42,3 @@ class SongBlock extends Component{
         );
     }
 }
-export default SongBlock;
