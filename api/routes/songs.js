@@ -38,11 +38,13 @@ router.post('/', function(req, res) {
   
     let newId = songIds.length > 0 ? Math.max.apply(Math, songIds) + 1 : 1;
 
+    croppedLink = "https://open.spotify.com/embed/track/" + req.body.link.substring(31, 53);
+
     let newSong = {
         id: newId,
         title: req.body.title,
         artist: req.body.artist,
-        link: req.body.link
+        link: croppedLink
       };
       data.push(newSong);
       res.status(201).json(newSong);

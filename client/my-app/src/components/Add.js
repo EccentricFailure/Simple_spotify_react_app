@@ -10,17 +10,14 @@ const Add = () => {
 
   return (
     <div className="input-wrap">
-        <div>
-          Artist name:
-          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}/>
+        <div className="input-div">
+          <input type="text" placeholder="Song name" value={title} onChange={(e) => setTitle(e.target.value)}/>
         </div>
-        <div>
-          Song name:
-          <input type="text" value={artist} onChange={(e) => setArtist(e.target.value)}/>
+        <div className="input-div">
+          <input type="text"  placeholder="Artist name" value={artist} onChange={(e) => setArtist(e.target.value)}/>
         </div>
-        <div>
-          Song share link:
-          <input type="text" value={link} onChange={(e) => setLink(e.target.value)}/>
+        <div className="input-div">
+          <input type="text" placeholder="Song spotify share link" value={link} onChange={(e) => setLink(e.target.value)}/>
         </div>
         <div>
           <button onClick={async () => {

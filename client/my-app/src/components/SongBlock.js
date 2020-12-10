@@ -20,12 +20,14 @@ class SongBlock extends Component{
                 return(
                     <div className='item' key={song.id}>
                         <iframe title="what" src={song.link} width="300" height="380" frameboard="0" allowTransparency="true" allow="encrypted-media"></iframe>
-                        <button onClick={async () => {
-                            const result = await axios.delete(`http://localhost:9000/songs/${ID}`);
-                            this.refresh();
-                        }}>
-                            Delete
-                        </button>
+                        <div className="buttonDiv">
+                            <button onClick={async () => {
+                                const result = await axios.delete(`http://localhost:9000/songs/${ID}`);
+                                this.refresh();
+                            }}>
+                                Delete
+                            </button>
+                        </div>
                     </div>
                 );
             })

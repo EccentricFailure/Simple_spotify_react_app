@@ -1,5 +1,5 @@
 .item {
-    margin: 5px;
+    margin: 35px;
 }
 
 .song-list{
@@ -7,3 +7,26 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.buttonDiv{
+    text-align: center;
+    margin: auto;
+}
+
+.buttonDiv button {
+    background-color: rgb(255, 23, 23);
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 18px;
+    cursor:pointer;
+    box-shadow: 0 4px rgb(0, 0, 0);
+}
+
+.buttonDiv button:hover {
+    background-color: rgb(236, 16, 16);
+}
+
+.buttonDiv button:active {
+    box-shadow: 0 2px rgb(0, 0, 0);
+    transform: translateY(2px);
+}
+
