@@ -1,3 +1,5 @@
+@import "base";
+
 .item {
     margin: 35px;
 }
@@ -15,19 +17,19 @@
 }
 
 .buttonDiv button {
-    background-color: rgb(255, 23, 23);
-    border: 2px solid rgb(0, 0, 0);
+    background-color: $delete;
+    border: 2px solid $shadow-color;
     font-size: 18px;
     cursor:pointer;
-    box-shadow: 0 4px rgb(0, 0, 0);
+    box-shadow: 0 4px $shadow-color;
 }
 
 .buttonDiv button:hover {
-    background-color: rgb(236, 16, 16);
+    background-color: $delete-hover;
 }
 
 .buttonDiv button:active {
-    box-shadow: 0 2px rgb(0, 0, 0);
+    box-shadow: 0 2px $shadow-color;
     transform: translateY(2px);
 }
 

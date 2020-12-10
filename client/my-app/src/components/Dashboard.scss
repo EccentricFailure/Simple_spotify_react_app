@@ -1,7 +1,29 @@
+@import "base";
+
 .search-form {
     font-size: 25px;
     margin:auto 20px;
     text-align: center;
+
+    input[type='submit'] {
+        font-size: large;
+        width: 100px;
+        padding: 8px;
+        height: 35px;
+        cursor:pointer;
+        box-shadow: 0 4px $shadow-color;
+        background-color: $button-color;
+        border-radius: 5px;
+    }
+
+    input[type='submit']:hover {
+        background-color: $hovered;
+    }
+
+    input[type='submit']:active {
+        box-shadow: 0 2px $shadow-color;
+        transform: translateY(2px);
+    }
 }
 
 h1 {
@@ -14,24 +36,4 @@ h1 {
         font-size: 24px;
         border-radius: 5px;
     }
-}
-
-.search-form input[type='submit'] {
-    font-size: large;
-    width: 100px;
-    padding: 8px;
-    height: 35px;
-    cursor:pointer;
-    box-shadow: 0 4px rgb(0, 0, 0);
-    background-color: rgb(25, 194, 25);
-    border-radius: 5px;
-  }
-
-.search-form input[type='submit']:hover {
-    background-color: rgb(16, 168, 16);
-}
-
-.search-form input[type='submit']:active {
-    box-shadow: 0 2px rgb(0, 0, 0);
-    transform: translateY(2px);
 }
